@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Registers</h1>
+    <h4>Student Name:</h4><input type="text" id="n1">
+    <h4>Student Name:</h4><input type="text" id="n2">
+    <h4>Student Name:</h4><input type="text" id="n3">
+    <h4>Student Name:</h4><input type="text" id="n4">
+    <br>
+    <br>
+    <br>
+    <button onclick="Sub()" id="sub">Submit</button>
+    <button onclick= "Sorting() "id="Sort">Sort</button>
+    <div id="output"></div>
+    <style>
+        body {
+            text-align: center;
+        }
+        #Sort {
+            display: none;
+        }
+        
+    </style>
+    <script>
+       var student = []
+function Sub() {
+    document.getElementById("Sort").style.display= "inline";
+    document.getElementById("sub").style.display= "none";
+    var temp= document.getElementById("n1").value
+    student.push(temp);
+    var temp= document.getElementById("n2").value
+    student.push(temp);
+    var temp= document.getElementById("n3").value
+    student.push(temp);
+    var temp= document.getElementById("n4").value
+    student.push(temp);
+    document.getElementById("output").innerHTML=student;
+
+}
+function Sorting() {
+    student.sort()
+    document.getElementById("output").innerHTML=student;
+}
+    </script>
+</body>
+</html>
